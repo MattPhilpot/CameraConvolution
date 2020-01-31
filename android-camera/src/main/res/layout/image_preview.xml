@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/preview_options_background_size"
+        android:background="#FF303030"
+        android:layout_gravity="top" />
+
+    <ImageView
+        android:layout_width="@dimen/preview_options_button_size"
+        android:layout_height="@dimen/preview_options_button_size"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_camera_not_accept"
+        android:contentDescription="@null"
+        android:id="@+id/img_preview_cancel" />
+
+    <ImageView
+        android:layout_width="@dimen/preview_options_button_size"
+        android:layout_height="@dimen/preview_options_button_size"
+        android:src="@drawable/ic_camera_warning"
+        android:layout_gravity="top|center"
+        android:layout_margin="10dp"
+        android:visibility="gone"
+        android:contentDescription="@null"
+        android:id="@+id/img_preview_warning" />
+
+    <ProgressBar
+        android:id="@+id/processingImageProgressBar"
+        style="@android:style/Widget.ProgressBar.Inverse"
+        android:layout_width="@dimen/preview_options_button_size"
+        android:layout_height="@dimen/preview_options_button_size"
+        android:layout_gravity="top|center"
+        android:layout_margin="10dp"
+        android:indeterminate="true"/>
+
+    <ImageView
+        android:layout_width="@dimen/preview_options_button_size"
+        android:layout_height="@dimen/preview_options_button_size"
+        android:layout_gravity="top|right"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_camera_save"
+        android:contentDescription="@null"
+        android:id="@+id/img_preview_save" />
+
+    <com.philpot.camera.views.ImagePreviewFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="47dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center"
+        android:id="@+id/img_preview_preview">
+    </com.philpot.camera.views.ImagePreviewFrameLayout>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/warning_dialog_root"
+        android:background="#FF303030"
+        android:visibility="gone"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/warning_dialog_message"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="Are you sure you want to save?"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancel"
+                android:id="@+id/warning_dialog_cancel"
+                android:layout_weight="1"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:id="@+id/warning_dialog_save"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:id="@+id/contrast_slider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="-7dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="#FF303030"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#FF303030"
+        android:layout_gravity="bottom" />
+
+    <ImageView
+        android:id="@+id/buttonrotate"
+        android:layout_width="@dimen/camera_options_button_size"
+        android:layout_height="@dimen/camera_options_button_size"
+        android:src="@drawable/ic_camera_rotate"
+        android:layout_marginLeft="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|left"/>
+
+    <ImageView
+        android:layout_width="@dimen/camera_options_button_size"
+        android:layout_height="@dimen/camera_options_button_size"
+        android:src="@drawable/ic_camera_not_accept"
+        android:contentDescription="@null"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="-50dp"
+        android:id="@+id/ic_camera_not_accept"
+        android:layout_gravity="bottom|left"/>
+
+    <ImageView
+        android:id="@+id/buttoncontrast"
+        android:layout_width="@dimen/camera_options_button_size"
+        android:layout_height="@dimen/camera_options_button_size"
+        android:src="@drawable/ic_camera_fix"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|center"/>
+
+    <ImageView
+        android:layout_width="@dimen/camera_options_button_size"
+        android:layout_height="@dimen/camera_options_button_size"
+        android:src="@drawable/ic_camera_accept"
+        android:contentDescription="@null"
+        android:id="@+id/ic_camera_accept"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="-50dp"
+        android:layout_gravity="bottom|right"/>
+
+    <ImageView
+        android:id="@+id/buttoncrop"
+        android:layout_width="@dimen/camera_options_button_size"
+        android:layout_height="@dimen/camera_options_button_size"
+        android:src="@drawable/ic_camera_crop"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="bottom|right"/>
+
+
+
+</FrameLayout>

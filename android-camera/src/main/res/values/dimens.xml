@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="focus_area_size">10dp</dimen>
+    <dimen name="focus_ring_size">70dp</dimen>
+    <dimen name="camera_button_area">90dp</dimen>
+    <dimen name="camera_options_button_size">35dp</dimen>
+    <dimen name="preview_options_button_size">20dp</dimen>
+    <dimen name="preview_options_background_size">40dp</dimen>
+    <dimen name="camera_take_picture_size">70dp</dimen>
+    <dimen name="camera_take_picture_margin">10dp</dimen>
+
+    <dimen name="border_thickness">3dp</dimen>
+    <dimen name="corner_thickness">5dp</dimen>
+    <dimen name="guideline_thickness">1px</dimen>
+
+    <dimen name="target_radius">24dp</dimen>
+    <dimen name="snap_radius">3dp</dimen>
+    <dimen name="corner_length">20dp</dimen>
+</resources>
