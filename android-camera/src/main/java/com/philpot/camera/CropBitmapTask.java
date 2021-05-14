@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
+
 public class CropBitmapTask extends AsyncTask<Void, Void, Boolean> {
     private static final String TAG = CropBitmapTask.class.getSimpleName();
 
